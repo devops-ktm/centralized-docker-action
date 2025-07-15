@@ -1,0 +1,23 @@
+# This is a REUSABLE GitHub Action
+name: Reusable Docker Build
+
+on:
+  workflow_call:
+    inputs:
+      image_name:
+        required: true
+        type: string
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker Image
+        run: docker build -t ${{ inputs.image_name }} .
+
+      - name: Show Docker Images
+        run: docker images
+
