@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
         
       - name: Print all environment variables
         run: printenv
@@ -27,10 +28,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Echo commit SHA
+        run: | 
+          echo "Commit: ${{ github.sha }}"
+
       - name: info
         run: |
           echo "User: ${{ github.actor }}"
-          echo "Commit: ${{ github.meesage}}"
           echo "Profile: https://github.com/${{ github.actor }}"
           echo "Workflow File: ${{ github.workflow }}"
           echo "Repository: ${{ github.repository }}"
