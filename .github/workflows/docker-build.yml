@@ -38,8 +38,8 @@ jobs:
           
       - name: info
         run: |
-          echo "User: ${{ github.actor }}"
-          echo "Profile: https://github.com/${{ github.actor }}"
+          echo "User: ${{ github.login }}"
+          echo "Profile: https://github.com/${{ github.sender.avatar_url }}"
           echo "Workflow File: ${{ github.workflow }}"
           echo "Repository: ${{ github.repository }}"
           ORG_NAME="${{ github.repository_owner }}"
