@@ -31,7 +31,11 @@ jobs:
       - name: Echo commit SHA
         run: | 
           echo "Commit: ${{ github.sha }}"
-
+          
+      - name: Echo message
+        run: | 
+          echo "message: ${{ github.message }}"
+          
       - name: info
         run: |
           echo "User: ${{ github.actor }}"
