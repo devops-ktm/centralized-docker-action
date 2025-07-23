@@ -25,4 +25,4 @@ jobs:
         
       - name: Show the value of the dynamic variable
         run: echo $A_SECOND_VAR
-     
+ 
