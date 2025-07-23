@@ -27,6 +27,14 @@ jobs:
           echo "Commit: ${{ github.sha }}"
           echo "Profile: https://github.com/${{ github.actor }}"
           echo "Workflow File: ${{ github.workflow }}"
+          echo "Repository: ${{ github.repository }}"
+          ORG_NAME="${{ github.repository_owner }}"
+          REPO_NAME="${{ github.event.repository.name }}"
+          echo "Org: $ORG_NAME"
+          echo "Repo: $REPO_NAME"
+          echo "Merged: ${ORG_NAME}/${REPO_NAME}"
+      
+
 
           
       
