@@ -2,7 +2,10 @@ name: Reusable Docker Build
 
 on:
   workflow_call:
-
+    inputs:
+      image_name:
+        required: true
+        type: string
  
 jobs:
   docker:
