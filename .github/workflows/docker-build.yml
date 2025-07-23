@@ -18,6 +18,7 @@ jobs:
         uses: actions/checkout@v3
         
       - name: github-all
-        run: ${{ github }}
+        run: echo '${{ toJson(github) }}'
+
 
 
