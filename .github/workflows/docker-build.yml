@@ -34,7 +34,7 @@ jobs:
           
       - name: Echo message
         run: | 
-          echo "message: ${{ github.message }}"
+          echo "Commit: ${{ github.message }}"
           
       - name: info
         run: |
