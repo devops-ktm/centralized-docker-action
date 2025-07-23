@@ -23,5 +23,9 @@ jobs:
       - name: Print all environment variables
         run: printenv
 
+      - name: Show the value
 
+        run: |
+
+          echo $A_SECOND_VAR
 
