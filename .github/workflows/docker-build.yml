@@ -30,7 +30,7 @@ jobs:
       - name: info
         run: |
           echo "User: ${{ github.actor }}"
-          echo "Commit: ${{ github.sha }}"
+          echo "Commit: ${{ github.meesage}}"
           echo "Profile: https://github.com/${{ github.actor }}"
           echo "Workflow File: ${{ github.workflow }}"
           echo "Repository: ${{ github.repository }}"
