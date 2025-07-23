@@ -38,15 +38,12 @@ jobs:
           
       - name: info
         run: |
-          echo "User: ${{ github.login }}"
+          echo "User: ${{ github.event.sender.login }}"
           echo "Profile: https://github.com/${{ github.event.sender.avatar_url }}"
           echo "Workflow File: ${{ github.workflow }}"
           echo "Repository: ${{ github.repository }}"
           ORG_NAME="${{ github.repository_owner }}"
           REPO_NAME="${{ github.event.repository.name }}"
-          echo "Org: $ORG_NAME"
-          echo "Repo: $REPO_NAME"
-          echo "Merged: ${ORG_NAME}/${REPO_NAME}"
       
 
 
